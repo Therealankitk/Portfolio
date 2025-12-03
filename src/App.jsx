@@ -14,24 +14,30 @@ export default function App() {
     const homeRef = useRef(null)
     return (
         <>
-            <div className="page1">
-                <Navbar homeRef={homeRef} aboutRef={aboutRef} skillRef={skillRef} projectRef={projectRef} contactRef={contactRef}/>
-                <Home homeRef={homeRef}/>
+            <div className="mobile-view">
+                <h2>This portfolio is not suitable for the present device. <br /> Please open it on a laptop or desktop.</h2>
+                <p>Apologies for the inconvenience caused.</p>
             </div>
-            <div className="page2a">
-                <About aboutRef={aboutRef} contactRef={contactRef}/>
-            </div>
-            <div className="page2b">
-                <Skills skillRef={skillRef}/>
-            </div>
-            <div className="page3">
-                <Projects projectRef={projectRef}/>
-            </div>
-            <div className="page4">
-                <Contacts contactRef={contactRef}/>
-            </div>
-            <div className="page5">
-                <Footer />
+            <div className="site">
+                <div className="page1">
+                    <Navbar homeRef={homeRef} aboutRef={aboutRef} skillRef={skillRef} projectRef={projectRef} contactRef={contactRef}/>
+                    <Home homeRef={homeRef}/>
+                </div>
+                <div className="page2a">
+                    <About aboutRef={aboutRef} contactRef={contactRef}/>
+                </div>
+                <div className="page2b">
+                    <Skills skillRef={skillRef}/>
+                </div>
+                <div className="page3">
+                    <Projects projectRef={projectRef}/>
+                </div>
+                <div className="page4">
+                    <Contacts contactRef={contactRef}/>
+                </div>
+                <div className="page5">
+                    <Footer />
+                </div>
             </div>
         </>
     )
