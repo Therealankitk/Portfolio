@@ -42,4 +42,4 @@ The portfolio features several key projects, including:
 ---
 
 To visit my portfolio go to this link : 
-[Link Text](https://Therealankitk.github.io/Portfolio/)
+[View my Portfolio](https://Therealankitk.github.io/Portfolio/)
