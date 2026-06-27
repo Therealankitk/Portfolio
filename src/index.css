@@ -1,7 +1,7 @@
 html , body{
     margin : 0;
     padding: 0;
-    background-color: #eaeaea;
+    background-color: #121212;
     height: 100%;
     width: 100%;
     font-family: 'karla';
@@ -35,7 +35,7 @@ html , body{
 
 .page1{
     background-color: #eaeaea;
-    max-height: 96vh;
+    max-height: 100vh;
     padding: 60px 10px 10px 10px;
     border: none;
     position: relative;
@@ -43,6 +43,16 @@ html , body{
     border-bottom-left-radius: 30px;
     border-bottom-right-radius: 30px;
     overflow: hidden;
+
+    -webkit-mask-image: url("assets/maskin1.png");
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-position: bottom center;
+    -webkit-mask-size: cover;
+
+    mask-image: url("assets/maskin1.png");
+    mask-repeat: no-repeat;
+    mask-position: bottom center;
+    mask-size: cover;
 }
 
 .nav{
@@ -58,6 +68,7 @@ html , body{
     position: fixed; 
     min-width: 92.5vw;
     top: 10px;
+    left: 20px;
     z-index: 10;
 }
 
@@ -105,18 +116,55 @@ h1 {
 
 
 .home{
-    font-size: 2rem;
-    margin: 60px 30px;
+    /* min-width: 30vw; */
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    margin: 0px 30px 100px 30px;
+}
+
+.HW{
+    /* min-width: 100vw; */
+    font-size: 10rem;
+    /* letter-spacing: 0.5rem; */
+    position: relative;
+    font-family: "Climate Crisis";
+    color: #12121255;
+    z-index: 1;
+    transform: translateY(10%);
 }
 
 .name{
     display: flex;
-    flex-direction: column;
+    align-items: center;
+    transform: translateY(-30%);
 }
 
-.name > .special{
-    font-family: "Rouge Script";
-    margin-right: 10px;
+.name > span{
+    font-family: 'WindSong';
+    font-size: 3rem;
+    position: absolute;
+    font-weight: 500;
+}
+
+.name > h1{
+    position: relative;
+    z-index: 2;
+    font-family: "Noto Serif Display";
+    margin-left: 50px;
+    font-size: 10rem;
+    color: #121212;
+    /* min-width: 100vw; */
+}
+
+.typewriter{
+    font-family: "WDXL Lubrifont SC";
+    font-size: 7rem;
+    transform: translateY(-80%);
+    color: #1212129d;
 }
 
 .links{
@@ -124,8 +172,10 @@ h1 {
     display: flex;
     text-decoration: none;
     color: #121212;
-    font-size: 3rem;
-    margin: 20px 0px;
+    font-size: 4rem;
+    margin: 60px 0px 20px 0px;
+    padding: 50px 0px 0px 0px;
+    transform: translateY(-170%);
 }
 
 a, a:visited {
@@ -139,6 +189,7 @@ a, a:visited {
     padding: 20px 20px;
     font-size: 1rem;
     margin-left: 30px;
+    transform: translateY(-400%);
 }
 
 .resume-btn > span{
@@ -150,14 +201,20 @@ a, a:visited {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    position: relative;
+    z-index: 5;
 }
 
 .profile > img{
-    height: 60vh;
-    margin-right: 100px;
-    margin-top: 20px;
-    border-radius: 50%;
-    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.466);
+    height: 110vh;
+    /* margin-right: 80px; */
+    position: absolute;
+    margin-top: 50px;
+    z-index: 5;
+    top: 0;
+    right: 0px;
+    justify-content: center;
+    filter: drop-shadow(2px 2px 15px rgba(0, 0, 0, 0.334));
 }
 
 .anim-btns{
@@ -198,6 +255,7 @@ a, a:visited {
 .anim-btns:hover,.anim-btns:focus-visible {
     color: #eaeaea;
 }
+
 
 .page2a{
     background-color: #121212;
@@ -325,7 +383,7 @@ a, a:visited {
 
 .page3{
     background-color: #eaeaea;
-    height: 110vh;
+    height: 100vh;
     margin-top: -5vh;
     position: relative;
     z-index: 1;
@@ -335,6 +393,16 @@ a, a:visited {
     flex-direction: column;
     align-items: center;
     padding: 10px 0;
+
+    -webkit-mask-image: url("assets/maskin3.svg");
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-position: center;
+    -webkit-mask-size: cover;
+
+    mask-image: url("assets/maskin3.svg");
+    mask-repeat: no-repeat;
+    mask-position: top left;
+    mask-size: 100% 100%;    
 }
 
 .page3 > h2 {
@@ -479,15 +547,16 @@ a, a:visited {
 
 .contactform{
     margin-top: 10vh;
-    height: 90vh;
+    height: 80vh;
     display: flex;
     align-items: center;
 }
 
 .contact-form{
     border-radius: 20px;
-    height: 60vh;
+    height: 55vh;
     width: 25vw;
+    font-size: 1.2rem;
     background-color: #eaeaea;
     padding: 20px;
     display: flex;
@@ -498,7 +567,7 @@ a, a:visited {
 }
 
 .contact-form > h3{
-    margin: 5px;
+    margin: 10px;
 }
 
 form{

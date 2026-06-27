@@ -3,8 +3,8 @@ import { Typewriter } from 'react-simple-typewriter'
 
 export default function TypewriterRoles() {
   return (
-    <h1 style={{ color: '#121212' }}>
-    <Typewriter
+    <h1 className="typewriter">
+    {`<`}<Typewriter
         words={[
         "Frontend Developer",
         "Full-Stack Developer",
@@ -17,7 +17,7 @@ export default function TypewriterRoles() {
         typeSpeed={50}
         deleteSpeed={100}
         delaySpeed={1500}
-    />
+    />{`/>`}
     </h1>
   )
 }

@@ -5,7 +5,8 @@ import { db } from "./firebase"
 import { ref, get } from "firebase/database"
 import { motion } from "framer-motion"
 import { useEffect, useState } from "react"
-import profile from "./assets/profilePhoto.png"
+import profile from "./assets/portfolioimg.png"
+// import profile from "./assets/profile.png"
 export default function home({homeRef}){
     const [resume,setResume] = useState("");
     useEffect(() => {
@@ -29,11 +30,12 @@ export default function home({homeRef}){
                 whileInView={{x:0}}
                 transition={{delay:0.2, type:'spring', stiffness:100}}>
 
-                <h1 style={{fontSize:'3rem'}}>Hello World</h1>
+                <h1 className="HW">Hello World</h1>
                 <div className="name">
-                    <h1><span style={{fontFamily: 'Rouge Script',fontSize: '3rem'}}>I'm </span>Ankit Kundu</h1>
-                    <TypeWriter />
+                    <span>I'm</span>
+                    <h1>Ankit Kundu</h1>
                 </div>
+                <TypeWriter />
                 <ul className="links">
                     <li><a href="https://github.com/Therealankitk"><FontAwesomeIcon icon={faGithub} /></a></li>
                     <li><a href="https://www.linkedin.com/in/ankit-kundu-a18a202bb/"><FontAwesomeIcon icon={faLinkedin} /></a></li>
@@ -44,12 +46,15 @@ export default function home({homeRef}){
                     </button>
                 </a>
             </motion.div>
-            <div className="profile">
-                <motion.img src={profile} alt="profile-pic" 
-                    initial={{opacity:0 , x:50}}
+            <motion.div className="profile"
+                initial={{opacity:0}}
+                whileInView={{opacity:1, x:0}} 
+                transition={{delay:0.6, duration:0.4}}>
+                <img src={profile} alt="profile-pic" 
+                    initial={{opacity:0}}
                     whileInView={{opacity:1, x:0}} 
                     transition={{delay:0.6, duration:0.4}}/>
-            </div>
+            </motion.div>
         </div>
     )
 }

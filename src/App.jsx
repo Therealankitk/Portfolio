@@ -19,10 +19,11 @@ export default function App() {
                 <p>Apologies for the inconvenience caused.</p>
             </div>
             <div className="site">
+                <Navbar homeRef={homeRef} aboutRef={aboutRef} skillRef={skillRef} projectRef={projectRef} contactRef={contactRef}/>
                 <div className="page1">
-                    <Navbar homeRef={homeRef} aboutRef={aboutRef} skillRef={skillRef} projectRef={projectRef} contactRef={contactRef}/>
                     <Home homeRef={homeRef}/>
                 </div>
+                {/* <div className="wave-cap"></div> */}
                 <div className="page2a">
                     <About aboutRef={aboutRef} contactRef={contactRef}/>
                 </div>
